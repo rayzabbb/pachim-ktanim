@@ -1,0 +1,213 @@
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+.image-cell {
+  width: 40%;
+  padding: 10px;
+}
+
+.text-cell {
+  width: 60%;
+  padding: 10px;
+  text-align: right; /* Align text to the right for Hebrew */
+  direction: rtl; /* Set text direction to right-to-left */
+}
+
+.full-page-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px; /* Add this line to make the corners rounded */
+}
+
+
+/* עיצוב כפתור */
+button {
+  background-color: #4CAF50; /* צבע רקע ירוק */
+  color: white; /* צבע הטקסט */
+  border: none; /* הסרת מסגרת */
+  padding: 10px 20px; /* ריפוד פנימי */
+  font-size: 16px;
+  border-radius: 25px; /* פינות מעוגלות */
+  cursor: pointer; /* סמן יד בעת ריחוף */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #45a049; /* צבע רקע ירוק כהה יותר */
+  transform: scale(1.05); /* אפקט הקטנה קלה */
+}
+
+button:active {
+  transform: scale(0.95); /* אפקט לחיצה */
+}
+.full-page-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* הוספת צל רך */
+  transition: transform 0.3s ease; /* אנימציה בעת ריחוף */
+}
+
+.full-page-image:hover {
+  transform: scale(1.02); /* הגדלה קלה */
+}
+.text-cell {
+  width: 60%;
+  padding: 20px; /* הגדלת הריפוד */
+  text-align: right;
+  direction: rtl;
+  background-color: #f9f9f9; /* רקע אפור בהיר */
+  border-radius: 15px; /* פינות מעוגלות */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* צל רך */
+  transition: transform 0.3s ease;
+}
+
+.text-cell:hover {
+  transform: translateY(-5px); /* הרמת הטקסט קצת כלפי מעלה */
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f4f8; /* רקע כללי בהיר */
+  min-height: 100vh; /* גובה מלא של העמוד */
+}
+
+.main-table {
+  width: 90%;
+  max-width: 1200px; /* הגבלת רוחב מקסימלי */
+  border-collapse: collapse;
+  background-color: #fff; /* רקע לבן לטבלה */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* צל כללי לטבלה */
+}
+h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333; /* צבע כהה */
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6; /* ריווח בין שורות */
+  color: #555; /* צבע טקסט אפור כהה */
+}
+/* סגנון כללי */
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column; /* ברירת מחדל - טור במכשירים קטנים */
+}
+
+.main-table {
+  width: 90%;
+  max-width: 1200px; /* מקסימום רוחב לדף */
+  border-collapse: collapse;
+}
+
+.image-cell,
+.text-cell {
+  padding: 10px;
+}
+
+.full-page-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* התנהגות במסכים גדולים */
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row; /* טבלה הופכת לשורות */
+  }
+
+  .image-cell {
+    width: 40%;
+  }
+
+  .text-cell {
+    width: 60%;
+  }
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.image-cell {
+  flex: 1 1 300px;
+  padding: 10px;
+}
+
+.text-cell {
+  flex: 1 1 300px;
+  padding: 10px;
+  text-align: right;
+  direction: rtl;
+}
+
+.full-page-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+h2 {
+  font-size: 2vw;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* עיצוב למסכים קטנים */
+@media (max-width: 767px) {
+  .text-cell, .image-cell {
+    width: 100%;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+body {
+  overflow: hidden;
+}
